@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block mid %}
+<div class="container-fluid text-center">    
+    <div class="row content">
+        <div class="col-sm-4 sidenav">
+        </div>
+        <div class="col-sm-4 text-left"> 
+            <form action="" method="post">
+                <h3>Research Methodology</h3><hr>
+                <div class="form-group">  
+                  <label for="mreg">Month of Registration:</label>  
+                  <input type="text" class="form-control" id="mreg" placeholder="dd/mm/yyyy">  
+                </div>  
+                <hr>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="rmsatisfied" id="satis" value="satis">Satisfactory
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="rmsatisfied" id="unsatis" value="unsatis">Unsatisfactory
+                    </label>
+                </div>
+                <hr>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="rmcomplete" id="comp" value="compl">Completed
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="rmcomplete" id="incmp" value="incmpl">Incomplete
+                    </label>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-primary">Next</button>  
+              </form>
+            <hr>
+        </div>
+        <div class="col-sm-4 sidenav">
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
