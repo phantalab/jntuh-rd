@@ -3,7 +3,7 @@
         {% load static %}
         <title>DRDIS</title>
         <link rel="stylesheet" href="{% static 'rnd/css/bootstrap.min.css' %}" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="{% static 'rnd/js/jquery-3.4.1.min.js' %}"></script>
         <script src="{% static 'rnd/js/bootstrap.min.js' %}"></script> 
     </head>
     <body> 
@@ -20,8 +20,15 @@
                 <ul class="dropdown-menu">
                     <li><a href="{% url 'prephd' %}">Pre PHD</a></li>
                     <li><a href="{% url 'resmtd' %}">Research Methodology</a></li>
-                    <li><a href="{% url 'home' %}">Research Review Meeting</a></li>
-                    <li><a href="{% url 'home' %}">Colloquim</a></li>
+                    <li><a href="{% url 'rrm' %}">Research Review Meeting</a></li>
+                    <li><a href="{% url 'collaq' %}">Colloquim</a></li>
+                    <li><a href="{% url 'revsubmit' %}">Revise Resubmit</a></li>
+                    <li><a href="{% url 'plagarism' %}">Plagarism</a></li>
+                    <li><a href="{% url 'theSubmit' %}">Thesis-Submission</a></li>
+                    <li><a href="{% url 'vivavoca' %}">VIVA VOCA</a></li>
+                    <li><a href="{% url 'extend' %}">Extension Period</a></li>
+                    <li><a href="{% url 'changeSuper' %}">Change Supervisor or Co-Supervisor</a></li>
+                                    
 
                 </ul>
               </li>

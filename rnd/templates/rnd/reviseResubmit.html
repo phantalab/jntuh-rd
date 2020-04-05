@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block mid %}
+<div class="container">
+    <h2 style="text-align:center">Revise & Resubmission</h2>
+    <form class="form-horizontal" action="whatever.php">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="revisedDate">Date, Month and Year of Revised Thesis: </label>
+            <div class="col-sm-10">          
+              <input type="date" class="form-control" id="revisedDate" placeholder="Month and Year of Revised Thesis">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="deDate">Date, Month and Year of Communicated to DE: </label>
+            <div class="col-sm-10">          
+              <input type="date" class="form-control" id="deDate" placeholder="Date, Month and Year of Communicated to DE" >
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+    </form>
+</div>
+{% endblock %}}

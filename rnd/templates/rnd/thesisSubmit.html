@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{%  block mid%}
+<body>
+    <form class="form-horizontal" action="somepage.php">
+    <div class="container">
+        <h2 style="text-align:center">Thesis Submission</h2>
+        <form class="form-horizontal" action="/action_page.php">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="monyear">Student Submission Date: </label>
+            <div class="col-sm-10">          
+              <input type="date" class="form-control" id="studentDate" placeholder="Select a Month & Year" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="monyear">Submission Date to DE:</label>
+            <div class="col-sm-10">          
+              <input type="date" class="form-control" id="DEDate" placeholder="Select a Month & Year" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="monyear">Reviewing Reports from External Examiners by DE:</label>
+            <div class="col-sm-10">          
+              <input type="date" class="form-control" id="ExtExam" placeholder="Select a Month & Year" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="monyear">Date of Communication to student:</label>
+            <div class="col-sm-10">          
+              <input type="date" class="form-control" id="studCum" placeholder="Select a Month & Year" >
+            </div>
+          </div>
+
+
+          
+
+
+         
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+{% endblock %}
