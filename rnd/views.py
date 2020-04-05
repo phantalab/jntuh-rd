@@ -2,7 +2,7 @@ from django.shortcuts import render
 import pyrebase
 from django.shortcuts import render 
 
-
+# Authentication keys
 
 config = {
     'apiKey': "AIzaSyAwTQ43TVqlmBvMyXZjRI5UJAj70GZJ1CE",
