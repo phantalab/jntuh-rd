@@ -8,25 +8,13 @@ def home(request):
 
 
 def login(request):
-<<<<<<< HEAD
-    return render(request, 'rnd/loginp.html')
-
-=======
     return render(request,'rnd/login1.html')
->>>>>>> rosh
 
 def prephd(request):
     return render(request, 'rnd/prephd.html')
 
 
 def resmtd(request):
-<<<<<<< HEAD
-    return render(request, 'rnd/resmtd.html')
-
-
-def rrm(request):
-    return render(request, 'rnd/rrm.html')
-=======
     return render(request,'rnd/researchMethod.html')
 
 def rrm(request):
@@ -52,4 +40,3 @@ def extend(request):
 
 def changeSuper(request):
     return render(request,'rnd/supervisorChange.html')
->>>>>>> rosh
