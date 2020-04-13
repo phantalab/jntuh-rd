@@ -1,6 +1,29 @@
 from django.shortcuts import render
+import pyrebase
+from . import cred
+
+
 
 # Create your views here.
+
+
+firebase = pyrebase.initialize_app(cred.config)
+auth = firebase.auth()
+
+
+
+def postlogin(request):
+    email=request.POST.get('email')
+    passw = request.POST.get("pass")
+    try:
+        user = auth.sign_in_with_email_and_password(email,passw)
+    except:
+        message = "invalid cerediantials"
+        return render(request,"login1.html",{"msg":message})
+        print(user)
+    print(email,passw)
+    return render(request, "homep.html",{"e":email})
+
 
 
 def home(request):
