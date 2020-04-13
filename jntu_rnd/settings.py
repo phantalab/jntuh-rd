@@ -55,7 +55,7 @@ ROOT_URLCONF = 'jntu_rnd.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'rnd', 'templates','rnd')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
