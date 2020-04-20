@@ -1,14 +1,20 @@
 {% extends "base.html" %}
 {%  block mid %}
 <body>
-    <form class="form-horizontal" action="somepage.php">
+    <form class="form-horizontal" action="/extendSubmit/"method="post">
+      {% csrf_token %}
     <div class="container">
         <h2 style="text-align:center">Extension Period</h2>
-        <form class="form-horizontal" action="/action_page.php">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="subject">Student Roll No:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="studroll" name="studroll" placeholder="Enter Student Roll No:">
+          </div>
+        </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="monyear">Date, Month & Year of Extension Period: </label>
             <div class="col-sm-10">          
-              <input type="date" class="form-control" id="extendDate" placeholder="Select a Date Month & Year" >
+              <input type="date" class="form-control" id="extendDate" name="extendDate" placeholder="Select a Date Month & Year" >
             </div>
          </div>
          <div class="form-group">
@@ -16,11 +22,11 @@
           <div class="container">
             <label class="radio-inline" >
             
-              <input type="radio"  id="Granted" name="Permission">Permission Granted
+              <input type="radio"  id="Granted" name="Permission" value=yes>Permission Granted
             </label>
             <label class="radio-inline" >
            
-              <input type="radio"  id="Denied" name="Permission">Permission Denied
+              <input type="radio"  id="Denied" name="Permission" value=no>Permission Denied
             </label>
           </div>
       </div>

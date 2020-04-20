@@ -2,23 +2,30 @@
 {% block mid %}
     <div class="container">
         <h2 style="text-align:center">Pre-PhD</h2>
-        <form class="form-horizontal" action="/action_page.php">
+        <form class="form-horizontal" action="/prephdSubmit/" method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject">Student Roll No:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="studroll" name="studroll" placeholder="Enter Student Roll No:">
+            </div>
+          </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="subject">Subject Name:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="subject" placeholder="Enter subject Name" name="subject">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject Name">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="regMonth">Month of Registration: </label>
             <div class="col-sm-10">          
-              <input type="month" class="form-control" id="regMonth" placeholder="Select a Month" name="regMonth">
+              <input type="month" class="form-control" id="regMonth" name="regMonth" placeholder="Select a Month" >
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="marks">Marks Obtained:</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="marks" placeholder="Marks Obtained" name="subject">
+              <input type="number" class="form-control" id="marks" name="marks" placeholder="Marks Obtained" >
             </div>
           </div>
           <div class="form-group">        

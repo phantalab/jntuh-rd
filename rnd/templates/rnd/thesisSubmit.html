@@ -1,32 +1,38 @@
 {% extends "base.html" %}
 {%  block mid%}
 <body>
-    <form class="form-horizontal" action="somepage.php">
+    <form class="form-horizontal" action="/theSubmitSubmit/"method="post">
+      {% csrf_token %}
     <div class="container">
         <h2 style="text-align:center">Thesis Submission</h2>
-        <form class="form-horizontal" action="/action_page.php">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="subject">Student Roll No:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="studroll" name="studroll" placeholder="Enter Student Roll No:">
+          </div>
+        </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="monyear">Student Submission Date: </label>
             <div class="col-sm-10">          
-              <input type="date" class="form-control" id="studentDate" placeholder="Select a Month & Year" >
+              <input type="date" class="form-control" id="studentDate" name="studentDate" placeholder="Select a Month & Year" >
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="monyear">Submission Date to DE:</label>
             <div class="col-sm-10">          
-              <input type="date" class="form-control" id="DEDate" placeholder="Select a Month & Year" >
+              <input type="date" class="form-control" id="DEDate" name="DEDate"placeholder="Select a Month & Year" >
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="monyear">Reviewing Reports from External Examiners by DE:</label>
             <div class="col-sm-10">          
-              <input type="date" class="form-control" id="ExtExam" placeholder="Select a Month & Year" >
+              <input type="date" class="form-control" id="ExtExam" name="EXTExam" placeholder="Select a Month & Year" >
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="monyear">Date of Communication to student:</label>
             <div class="col-sm-10">          
-              <input type="date" class="form-control" id="studCum" placeholder="Select a Month & Year" >
+              <input type="date" class="form-control" id="studCum" name="studCum" placeholder="Select a Month & Year" >
             </div>
           </div>
 

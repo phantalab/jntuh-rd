@@ -15,5 +15,17 @@ urlpatterns=[
     path('vivavoca',views.vivavoca,name="vivavoca"),
     path('extend',views.extend,name='extend'),
     path('changeSuper',views.changeSuper,name='changeSuper'),
+    
+    path('prephdSubmit/',views.prephdSubmit),
+    path('resmtdSubmit/',views.resmtdSubmit),
+    path('rrmSubmit/',views.rrmSubmit),
+    path('collaqSubmit/',views.collaqSubmit),
+    path('revsubmitSubmit/',views.revsubmitSubmit),
+    path('plagarismSubmit/',views.plagarismSubmit),
+    path('thesisSubmitSubmit/',views.theSubmitSubmit),
+    path('vivavocaSubmit/',views.vivavocaSubmit),
+    path('extendSubmit/',views.extendSubmit),
+    path('changeSuperSubmit/',views.changeSuperSubmit)
+
 
 ]

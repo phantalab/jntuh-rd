@@ -3,18 +3,26 @@
 <body>
     <div class="container">
         <h2 style="text-align:center">RRM</h2>
-        <form class="form-horizontal" action="somepage.php">
+        <form class="form-horizontal" action="/rrmSubmit/"method="post">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject">Student Roll No:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="studroll" name="studroll" placeholder="Enter Student Roll No:">
+            </div>
+          </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="rrmNo">RRM Number:
                 </label>
                     <div class="col-sm-10">
-                         <input type="text" class="form-control" id="rrmNo" placeholder="Enter RRM Number" name="rrmNumber">
+                         <input type="text" class="form-control" id="rrmNo" name="rrmNo" placeholder="Enter RRM Number" name="rrmNumber">
                      </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="regMonth">Month of Registration: </label>
                 <div class="col-sm-10">          
-                  <input type="month" class="form-control" id="regMonth" placeholder="Select a Month" name="regMonth">
+                  <input type="month" class="form-control" id="regMonth" name="regMonth" placeholder="Select a Month" name="regMonth">
                 </div>
               </div>
               <div class="form-group">
@@ -23,11 +31,11 @@
                     <div class="container">
                         <label class="radio-inline" >
                         
-                          <input type="radio"  id="yes" name="satisfactionRadio">Yes
+                          <input type="radio"  id="yes" name="satisfactionRadio" value=yes>Yes
                         </label>
                         <label class="radio-inline" >
                        
-                          <input type="radio"  id="no" name="satisfactionRadio">No
+                          <input type="radio"  id="no" name="satisfactionRadio" value=no>No
                         </label>
                       </div>
                   </div>
@@ -35,7 +43,7 @@
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="marks">Marks Obtained:</label>
                     <div class="col-sm-10">
-                      <input type="number" class="form-control" id="marks" placeholder="Marks Obtained" name="subject">
+                      <input type="number" class="form-control" id="marks" name="marks" placeholder="Marks Obtained" name="subject">
                     </div>
                   </div>
                   <div class="form-group">        
