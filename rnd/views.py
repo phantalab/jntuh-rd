@@ -1,12 +1,12 @@
 from django.shortcuts import render
 import pyrebase
-from . import cred
+#from . import cred
 
 
 # Create your views here.
 
 
-firebase = pyrebase.initialize_app(cred.config)
+'''firebase = pyrebase.initialize_app(cred.config)
 auth = firebase.auth()
 
 
@@ -21,10 +21,10 @@ def postlogin(request):
         print(user)
     print(email, passw)
     return render(request, "homep.html", {"e": email})
-
+'''
 
 def home(request):
-    print("current user---------->", auth.current_user)
+    #print("current user---------->", auth.current_user)
     return render(request, 'rnd/homep.html')
 
 

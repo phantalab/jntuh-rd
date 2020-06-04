@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'jntu_rnd.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nxfuujwa',
+        'USER': 'nxfuujwa',
+        'PASSWORD': 'VurCgoZaeCWtMZ1L9Uo4tGe7anlCeFTI',
+        'HOST': 'john.db.elephantsql.com',
     }
 }
 
